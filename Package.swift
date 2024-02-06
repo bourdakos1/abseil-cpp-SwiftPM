@@ -4,19 +4,14 @@
 import PackageDescription
 
 let package = Package(
-  name: "abseil",
+  name: "AbseilCXX17",
   products: [
-    .library(
-      name: "abseil",
-      targets: [
-        "abseil",
-      ]
-    )
+    .library(name: "AbseilCXX17", targets: ["AbseilCXX17"]),
   ],
 
   targets: [
     .target(
-      name: "abseil",
+      name: "AbseilCXX17",
       path: ".",
       exclude: [
         // main functions
@@ -38,7 +33,7 @@ let package = Package(
     .testTarget(
       name: "build-test",
       dependencies: [
-        "abseil",
+        "AbseilCXX17",
       ],
       path: "SwiftPMTests/build-test"
     ),
